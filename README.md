@@ -9,6 +9,9 @@
 
 ## Criando um Projeto
 
+<details>
+  <summary>Clique para mostrar conteúdo</summary>
+  
 Criando um projeto chamado mysite
 
 ```
@@ -28,8 +31,15 @@ mysite/
         wsgi.py
 ```
 
+
+</details>
+
+
 ## Criação de pacote
 
+<details>
+  <summary>Clique para mostrar conteúdo</summary>
+  
 Consiste na criação de um pacote que segue uma convenção e será criado no mesmo nivel de mysite para servir como a representação de um pacote
 
 ```
@@ -41,8 +51,17 @@ mysite/
 polls/
 ```
 
+
+</details>
+
+
+
+
 ## Criação da View
 
+<details>
+  <summary>Clique para mostrar conteúdo</summary>
+  
 ```
 polls/views.py
 ```
@@ -55,8 +74,16 @@ def index(request):
 
 Pará chamar esta view é necessário mapea-la para que seja inserida nos rotas através de um URLconf
 
+</details>
+
+
+
 
 ## Mapeando rotas
+
+<details>
+  <summary>Clique para mostrar conteúdo</summary>
+  
 
 ### polls/urls.py
 
@@ -81,6 +108,10 @@ urlpatterns = [
     path("admin/", admin.site.urls),
 ]
 ```
+
+</details>
+
+
 
 ## Iniciando o servidor 
 
