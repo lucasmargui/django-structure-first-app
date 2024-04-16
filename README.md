@@ -1,46 +1,46 @@
-<H1 align="center">Primeiro App Django</H1>
-<p align="center">🚀 Projeto de criação de um primeiro app em Django para referências futuras</p>
+<H1 align="center">First Django App</H1>
+<p align="center">🚀 Project to create a first app in Django for future references</p>
 
-## Recursos Utilizados
+## Resources Used
 
 * Python 3.10.6
 * Django
 
 
-## Criando um Projeto
+## Creating a Project
 
 <details>
-  <summary>Clique para mostrar conteúdo</summary>
-  
-Criando um projeto chamado mysite
+ <summary>Click to show content</summary>
+
+Creating a project called mysite
 
 ```
 django-admin startproject mysite
 ```
 
-A estrutura do projeto será criado dessa forma
+The project structure will be created this way
 
 ```
 mysite/
-    manage.py
-    mysite/
-        __init__.py
-        settings.py
-        urls.py
-        asgi.py
-        wsgi.py
+ manage.py
+ mysite/
+ __init__.py
+ settings.py
+ urls.py
+ asgi.py
+ wsgi.py
 ```
 
 
 </details>
 
 
-## Criação de pacote
+## Package creation
 
 <details>
-  <summary>Clique para mostrar conteúdo</summary>
-  
-Consiste na criação de um pacote que segue uma convenção e será criado no mesmo nivel de mysite para servir como a representação de um pacote
+ <summary>Click to show content</summary>
+
+It consists of creating a package that follows a convention and will be created at the same mysite level to serve as the representation of a package
 
 ```
 python manage.py startapp polls
@@ -57,11 +57,11 @@ polls/
 
 
 
-## Criação da View
+## View Creation
 
 <details>
-  <summary>Clique para mostrar conteúdo</summary>
-  
+ <summary>Click to show content</summary>
+
 ```
 polls/views.py
 ```
@@ -69,21 +69,21 @@ polls/views.py
 ```
 from django.http import HttpResponse
 def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+ return HttpResponse("Hello, world. You're at the polls index.")
 ```
 
-Pará chamar esta view é necessário mapea-la para que seja inserida nos rotas através de um URLconf
+To call this view, it is necessary to map it so that it can be inserted into the routes through a URLconf
 
 </details>
 
 
 
 
-## Mapeando rotas
+## Mapping routes
 
 <details>
-  <summary>Clique para mostrar conteúdo</summary>
-  
+ <summary>Click to show content</summary>
+
 
 ### polls/urls.py
 
@@ -93,7 +93,7 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path("", views.index, name="index"),
+ path("", views.index, name="index"),
 ]
 ```
 
@@ -104,8 +104,8 @@ from django.contrib import admin
 from django.urls import include, path
 
 urlpatterns = [
-    path("polls/", include("polls.urls")),
-    path("admin/", admin.site.urls),
+ path("polls/", include("polls.urls")),
+ path("admin/", admin.site.urls),
 ]
 ```
 
@@ -113,11 +113,10 @@ urlpatterns = [
 
 
 
-## Iniciando o servidor 
+## Starting the server
 
-Comando necessário para que o servidor seja iniciado, podendo trocar o localhost como parâmetro
+Command necessary for the server to start, being able to change localhost as a parameter
 
 ```
 python manage.py runserver
 ```
-   
